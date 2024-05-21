@@ -14,6 +14,7 @@
 		2643ED3B2BFC970F00BC15CF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643ED3A2BFC970F00BC15CF /* Location.swift */; };
 		2643ED3D2BFC971E00BC15CF /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643ED3C2BFC971E00BC15CF /* HistoricalEvent.swift */; };
 		2643ED3F2BFC9A2700BC15CF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643ED3E2BFC9A2700BC15CF /* LocationManager.swift */; };
+		2643ED412BFC9C5600BC15CF /* DataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643ED402BFC9C5600BC15CF /* DataSeeder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2643ED3A2BFC970F00BC15CF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2643ED3C2BFC971E00BC15CF /* HistoricalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEvent.swift; sourceTree = "<group>"; };
 		2643ED3E2BFC9A2700BC15CF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		2643ED402BFC9C5600BC15CF /* DataSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSeeder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2643ED3E2BFC9A2700BC15CF /* LocationManager.swift */,
+				2643ED402BFC9C5600BC15CF /* DataSeeder.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				2643ED3D2BFC971E00BC15CF /* HistoricalEvent.swift in Sources */,
 				2643ED2A2BFC968D00BC15CF /* ContentView.swift in Sources */,
 				2643ED3F2BFC9A2700BC15CF /* LocationManager.swift in Sources */,
+				2643ED412BFC9C5600BC15CF /* DataSeeder.swift in Sources */,
 				2643ED3B2BFC970F00BC15CF /* Location.swift in Sources */,
 				2643ED282BFC968D00BC15CF /* MapmoryApp.swift in Sources */,
 			);
