@@ -13,6 +13,7 @@
 		2643ED2F2BFC968F00BC15CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2643ED2E2BFC968F00BC15CF /* Preview Assets.xcassets */; };
 		2643ED3B2BFC970F00BC15CF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643ED3A2BFC970F00BC15CF /* Location.swift */; };
 		2643ED3D2BFC971E00BC15CF /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643ED3C2BFC971E00BC15CF /* HistoricalEvent.swift */; };
+		2643ED3F2BFC9A2700BC15CF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2643ED3E2BFC9A2700BC15CF /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2643ED2E2BFC968F00BC15CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2643ED3A2BFC970F00BC15CF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2643ED3C2BFC971E00BC15CF /* HistoricalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEvent.swift; sourceTree = "<group>"; };
+		2643ED3E2BFC9A2700BC15CF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		2643ED372BFC96C200BC15CF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2643ED3E2BFC9A2700BC15CF /* LocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				2643ED3D2BFC971E00BC15CF /* HistoricalEvent.swift in Sources */,
 				2643ED2A2BFC968D00BC15CF /* ContentView.swift in Sources */,
+				2643ED3F2BFC9A2700BC15CF /* LocationManager.swift in Sources */,
 				2643ED3B2BFC970F00BC15CF /* Location.swift in Sources */,
 				2643ED282BFC968D00BC15CF /* MapmoryApp.swift in Sources */,
 			);
@@ -323,6 +327,8 @@
 				DEVELOPMENT_TEAM = VPGX5Q423F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get the city name of where you are right now";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -352,6 +358,8 @@
 				DEVELOPMENT_TEAM = VPGX5Q423F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get the city name of where you are right now";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
