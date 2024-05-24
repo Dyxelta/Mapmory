@@ -21,48 +21,55 @@ struct HistoricalEventModal: View {
     @State private var expandedEvents: Set<String> = []
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Text(pickedLocation.cityName)
-                    .font(.title)
-                    .padding()
-                
-                Text(pickedLocation.cityDescription)
-                    .padding()
-                
-                Divider()
-                    .padding()
-                
-                ForEach(pickedLocation.events) { eventData in
-                    VStack(alignment: .leading) {
-                        HStack (alignment: .center){
-                            Text("\(eventData.eventName) (\(eventData.eventYear)) - \(eventData.eventAspect)")
-                                .font(.headline)
+        if pickedLocation.cityName == "Unknown" {
+            Text("Data unavailable")
+                .font(.title)
+                .padding()
+            Text("We have no data about the historical event in this city yet, stay tuned!")
+        } else {
+            ScrollView {
+                VStack {
+                    Text(pickedLocation.cityName)
+                        .font(.title)
+                        .padding()
+                    
+                    Text(pickedLocation.cityDescription)
+                        .padding()
+                    
+                    Divider()
+                        .padding()
+                    
+                    ForEach(pickedLocation.events) { eventData in
+                        VStack(alignment: .leading) {
+                            HStack (alignment: .center){
+                                Text("\(eventData.eventName) (\(eventData.eventYear)) - \(eventData.eventAspect)")
+                                    .font(.headline)
+                                
+                                Spacer()
+                                
+                                Image(systemName: expandedEvents.contains(eventData.eventName) ? "chevron.up" : "chevron.down")
+                                    .font(.body)
+                            }
+                            .padding(.vertical)
+                            .frame(maxWidth: UIScreen.main.bounds.width)
+                            .onTapGesture {
+                                withAnimation {
+                                    toggleExpansion(eventData.eventName)
+                                }
+                            }
                             
-                            Spacer()
+                            Divider()
                             
-                            Image(systemName: expandedEvents.contains(eventData.eventName) ? "chevron.up" : "chevron.down")
-                                .font(.body)
-                        }
-                        .padding(.vertical)
-                        .frame(maxWidth: UIScreen.main.bounds.width)
-                        .onTapGesture {
-                            withAnimation {
-                                toggleExpansion(eventData.eventName)
+                            if expandedEvents.contains(eventData.eventName) {
+                                Text(eventData.eventDesc)
+                                    .padding(.vertical)
                             }
                         }
-                        
-                        Divider()
-                        
-                        if expandedEvents.contains(eventData.eventName) {
-                            Text(eventData.eventDesc)
-                                .padding(.vertical)
-                        }
+                        .padding()
                     }
-                    .padding()
                 }
+                .padding()
             }
-            .padding()
         }
     }
     

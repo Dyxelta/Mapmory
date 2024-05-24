@@ -14,7 +14,6 @@ struct GetLocationPage: View {
     @StateObject private var locationManager = LocationManager()
     
     @State private var selectedCoordinate: CLLocationCoordinate2D?
-    
     @State private var showHistoricalEventModal = false
     @State private var showLocationErrorAlert = false
     @State private var isAddPin = false
@@ -52,6 +51,7 @@ struct GetLocationPage: View {
                     },
                     navigateAction: {
                         locationManager.reverseMapGeocode(coordinate: coordinate)
+                        
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             if locationManager.cityName == "Unknown" {
                                 showLocationErrorAlert = true

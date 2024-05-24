@@ -73,6 +73,7 @@ struct MapView: UIViewRepresentable {
         if let coordinate = selectedCoordinate {
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
+            
             uiView.removeAnnotations(uiView.annotations)
             uiView.addAnnotation(annotation)
             uiView.setCenter(coordinate, animated: true)
